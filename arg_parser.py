@@ -72,6 +72,11 @@ def parse_args():
     parser.add_argument('--bias', default=True,type=distutils.util.strtobool, help='use bias term in deconv')
     parser.add_argument('--stride', default=3, type=int, help='sampling stride in deconv')
     parser.add_argument('--freeze', default=False, type=distutils.util.strtobool, help='freeze the deconv updates')
+    
+    #for testing
+    parser.add_argument('--model_path', type=str, required=True, help='Path to the .pth.tar model file')
+    parser.add_argument('--batch_size', type=int, default=128, help='Path to the .pth.tar model file')
+     
 
     args = parser.parse_args()
 
