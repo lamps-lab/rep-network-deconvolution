@@ -249,7 +249,7 @@ There were a few minor module import issues and some Python library version conf
     ```
         pip install -r requirements.txt
     ```
-4. Download the trained weights from osf.io using [this link](https://osf.io/hp3ab/?view_only=70408e7bf10d442f9ddaa582a59051ff)
+4. Download the trained weights from osf.io using [this link](https://osf.io/hp3ab/files/osfstorage)
     - CIFAR10, CIFAR100 - best weights saved at 100 epochs [ cifar10_vgg16_BN, ..., cifar100_resnet18d_ND, ... ]
     - ImageNet - best weights saved at 90 epochs [ imagenet_vgg11d_ND, ... ]
 5. To test the models for Table 1 results, use the `test_script_for_table_1.py` script with the appropriate command-line arguments: 
