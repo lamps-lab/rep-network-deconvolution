@@ -238,11 +238,43 @@ There were a few minor module import issues and some Python library version conf
 6. For Table 2 results, run the provided bash scripts as mentioned in section "Steps we have followed to reproduce the original study" list item 6
 
 
+## To Validate the Results Using the Trained Weights (Direct Inference Without Training) ##
+
+1. Clone the GitHub repository https://github.com/lamps-lab/rep-network-deconvolution.git
+2. Download Imagenet and preapre the dataset according to the steps mentioned in previous section "Preparing Imagenet dataset to reproduce results from Table 2" 
+3. Install python library requirements
+    ```
+        pip install -r requirements.txt
+    ```
+4. Download the trained weights from [this link](<< URL >>)
+5. To test the models for Table 1 results, use the `test_script_for_table_1.py` script with the appropriate command-line arguments: 
+    - prameters
+        - --arch - neural network architecture name [ vgg16, resnet18d, preact, densenet121, resnext, mobilev2, dpn, pnasnetA, senet, efficient ]
+        - --dataset - dataset name [ cifar10, cifar100 ]
+        - --deconv - set this to `False` when using Batch Normalization (BN) [ False, True ]
+        - --model_path - path to the trained model weights corresponding to the dataset, model architecture, and training mode (BN or ND)
+
+            ```
+            !python test_script_table_1.py --arch vgg16 --dataset cifar10 --deconv False --model_path "checkpoints/cifar10_vgg16_BN.pth.tar"
+            ```
+6. To test the models for Table 2 results, use the `test_script_for_table_2.py` script with the appropriate command-line arguments: 
+    - prameters
+        - --a - neural network architecture name [ vgg11, vgg11_bn, vgg11d, resnet18, resnet18d, densenet121, densenet121d ]
+        - -j - number of data loading workers
+        - --deconv - set this to `False` when using Batch Normalization (BN) [ False, True ]
+        - DIR - ImageNet data directory `imagenet/ILSVRC/Data/CLS-LOC/`
+        - --resume - path to the trained model weights corresponding to the dataset, model architecture, and training mode (BN or ND)
+
+            ```
+            !python test_script_for_table_2.py -a resnet18d -j 32 --deconv True imagenet/ILSVRC/Data/CLS-LOC/ --resume "checkpoints/cifar10_vgg16_BN.pth.tar"
+            ```
+
+
 ```BibTeX
 
 ```
 
 ```
 Rochana R. Obadage | Kumushini Thennakoon 
-09/19/2024
+Updated on: 04/01/2025
 ```
