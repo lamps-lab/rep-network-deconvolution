@@ -269,7 +269,7 @@ There were a few minor module import issues and some Python library version conf
         - --resume - path to the trained model weights corresponding to the dataset, model architecture, and training mode (BN or ND)
 
             ```
-            !python test_script_for_table_2.py -a resnet18d -j 32 --deconv True imagenet/ILSVRC/Data/CLS-LOC/ --resume "checkpoints/cifar10_vgg16_BN.pth.tar"
+            !python test_script_for_table_2.py -a resnet18d -j 32 --deconv True imagenet/ILSVRC/Data/CLS-LOC/ --resume "checkpoints/imagenet_resnet18d_ND.pth.tar"
             ```
 
 
