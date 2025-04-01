@@ -162,55 +162,56 @@ There were a few minor module import issues and some Python library version conf
     - prameters
         - architecture - neural network architecture name [ vgg16, resnet18d, preact, densenet121, resnext, mobilev2, dpn, pnasnetA, senet, efficient ]
         - epochs - [ 1, 20, 100 ]
-        - o -- slurm output filename
+        - --time - total run time of the job allocation [days-hours:minutes:seconds]
+        - -o - slurm output filename
     - bash commands 
         - for batch normalization with CIFAR-10 dataset [ `single_experiment_cifar10.sh` ]
             ```
-            sbatch --export=ALL,architecture='pnasnetA',epochs=100 -o pnasnetA_cifar100_ep100_att2_BN.txt single_experiment_cifar10.sh
+            sbatch --time=48:00:00 --export=ALL,architecture='pnasnetA',epochs=100 -o pnasnetA_cifar100_ep100_att2_BN.txt single_experiment_cifar10.sh
             ```
         - for batch normalization with CIFAR-100 dataset [ `single_experiment_cifar100.sh` ]
             ```
-            sbatch --export=ALL,architecture='pnasnetA',epochs=100 -o pnasnetA_cifar100_ep100_att2_BN.txt single_experiment_cifar100.sh
+            sbatch --time=48:00:00 --export=ALL,architecture='pnasnetA',epochs=100,time=48:00:00 -o pnasnetA_cifar100_ep100_att2_BN.txt single_experiment_cifar100.sh
             ```
         - for network deconvolution with CIFAR-10 dataset [ `single_experiment_net_deconv_cifar10.sh` ]
             ```
-            sbatch --export=ALL,architecture='pnasnetA',epochs=100 -o pnasnetA_cifar100_ep100_att2_BN.txt single_experiment_net_deconv_cifar10.sh
+            sbatch --time=48:00:00 --export=ALL,architecture='pnasnetA',epochs=100,time=48:00:00 -o pnasnetA_cifar100_ep100_att2_BN.txt single_experiment_net_deconv_cifar10.sh
             ```
         - for network deconvolution with CIFAR-100 dataset [ `single_experiment_net_deconv_cifar100.sh` ]
             ```
-            sbatch --export=ALL,architecture='pnasnetA',epochs=100 -o pnasnetA_cifar100_ep100_att2_BN.txt single_experiment_net_deconv_cifar100.sh
+            sbatch --time=48:00:00 --export=ALL,architecture='pnasnetA',epochs=100,time=48:00:00 -o pnasnetA_cifar100_ep100_att2_BN.txt single_experiment_net_deconv_cifar100.sh
             ```
 6. To reproduce results from Table 2 (`main_imagenet.py`), we used below 7 bash scripts to schedule slurm jobs with default model parameters and 90 epochs:
     > DensetNet-121
     - for batch normalization with ImageNet dataset [ `imagenet_single_experiment_densenet121.sh` ]
         ```
-       sbatch -o imagenet_densenet.txt imagenet_single_experiment_densenet121.sh
+       sbatch --time=4-18:00:00 -o imagenet_densenet.txt imagenet_single_experiment_densenet121.sh
         ```
     - for Network Deconvolution with ImageNet dataset [ `imagenet_single_experiment_densenet121_deconv.sh` ]
         ```
-       sbatch -o imagenet_densenet_deconv.txt imagenet_single_experiment_densenet121_deconv.sh
+       sbatch --time=4-18:00:00 -o imagenet_densenet_deconv.txt imagenet_single_experiment_densenet121_deconv.sh
         ```
     > ResNet-18
     - for batch normalization with ImageNet dataset [ `imagenet_single_experiment_resnet.sh` ]
         ```
-       sbatch -o imagenet_single_experiment_resnet.txt imagenet_single_experiment_resnet.sh
+       sbatch --time=3-18:00:00 -o imagenet_single_experiment_resnet.txt imagenet_single_experiment_resnet.sh
         ```
     - for Network Deconvolution with ImageNet dataset [ `imagenet_single_experiment_resnet_deconv.sh` ]
         ```
-       sbatch -o imagenet_single_experiment_resnet_deconv.txt imagenet_single_experiment_resnet_deconv.sh
+       sbatch --time=3-18:00:00 -o imagenet_single_experiment_resnet_deconv.txt imagenet_single_experiment_resnet_deconv.sh
         ```
     > VGG-11
     - for original implementation with ImageNet dataset [ `imagenet_single_experiment_vgg11_original.sh` ]
         ```
-       sbatch -o imagenet_single_experiment_vgg11_original.txt imagenet_single_experiment_vgg11_original.sh
+       sbatch --time=1-18:00:00 -o imagenet_single_experiment_vgg11_original.txt imagenet_single_experiment_vgg11_original.sh
         ```
     - for batch normalization with ImageNet dataset [ `imagenet_single_experiment_vgg11_BN.sh` ]
         ```
-       sbatch -o imagenet_single_experiment_vgg11_BN.txt imagenet_single_experiment_vgg11_BN.sh
+       sbatch --time=1-18:00:00 -o imagenet_single_experiment_vgg11_BN.txt imagenet_single_experiment_vgg11_BN.sh
         ```
     - for Network Deconvolution with ImageNet dataset [ `imagenet_single_experiment_vgg11_deconv.sh` ]
         ```
-       sbatch -o imagenet_single_experiment_vgg11_deconv.txt imagenet_single_experiment_vgg11_deconv.sh
+       sbatch --time=1-18:00:00 -o imagenet_single_experiment_vgg11_deconv.txt imagenet_single_experiment_vgg11_deconv.sh
         ```
 
 7. Stored findings and graphs inside `results` directory 
