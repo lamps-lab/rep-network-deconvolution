@@ -44,6 +44,8 @@ README file of the original study is available at `original_paper/README.md`.
     │   single_experiment_cifar100.sh
     │   single_experiment_net_deconv_cifar10.sh
     │   single_experiment_net_deconv_cifar100.sh
+    │   test_script_for_table_1.py
+    │   test_script_for_table_2.py
     │   util.py
     └   valprep.sh
 ```
