@@ -231,7 +231,7 @@ There were a few minor module import issues and some Python library version conf
 ## To reproduce results of our reproducibility study ##
 
 1. Clone the GitHub repository https://github.com/lamps-lab/rep-network-deconvolution.git
-2. Download Imagenet and preapre the dataset according to the steps mentioned in previous section "Preparing Imagenet dataset to reproduce results from Table 2" 
+2. Download Imagenet and preapre the dataset according to the steps mentioned in previous section "Preparing Imagenet dataset to reproduce results from Table 2" (The CIFAR-10 and CIFAR-100 datasets required for reproducing Table 1 of the original study are automatically downloaded through the codebase using Torchvision datasets) 
 3. Install python library requirements
     ```
         pip install -r requirements.txt
