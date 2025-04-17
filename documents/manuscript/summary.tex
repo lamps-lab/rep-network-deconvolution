@@ -1,0 +1,38 @@
+\section*{\centering Reproducibility Summary}
+
+%\textit{Template and style guide to \href{https://paperswithcode.com/rc2022}{ML Reproducibility Challenge 2022}. The following section of Reproducibility Summary is \textbf{mandatory}. This summary \textbf{must fit} in the first page, no exception will be allowed. When submitting your report in OpenReview, copy the entire summary and paste it in the abstract input field, where the sections must be separated with a blank line.}
+
+\subsubsection*{Scope of Reproducibility}
+% {\color{red} State the main claim(s) of the original paper you are trying to reproduce (typically the main claim(s) of the paper). This is meant to place the work in context, and to tell a reader the objective of the reproduction.}
+Our work evaluates the claim that network deconvolution \cite{ye2020network} improves deep learning model performance compared with batch normalization. We re-ran the paper's original experiments using the same software, datasets, and evaluation metrics to determine whether the reported results could be reproduced. We examine the consistency of reported values, document discrepancies, and discuss reasons that some results were not able to be consistently reproduced. % to contribute to the discussion on the reasons that caused some reproduced results not 100\% consistent with the reported ones.
+
+% On a theoretical note, we address shortcomings of the algorithm and propose an extension to alleviate them. We also prove a desirable theoretical property of the extended algorithm.
+
+
+\subsubsection*{Methodology}
+
+% {\color{red} Briefly describe what you did and which resources you used. For example, did you use author's code? Did you re-implement parts of the pipeline? You can use this space to list the hardware and total budget (e.g. GPU hours) for the experiments.}
+%The authors published a repository with their experiments including most of the datasets used. 
+We used the original study's GitHub codebase \cite{githubGitHubYechengxideconvolution} with thorough documentation to repeat experiments to generate results in Tables 1 and 2. For each CNN architecture, we conducted three attempts per reported value, resulting in 360 reproduced values as compared with 120 results reported in the original paper. The ImageNet dataset was not available from the URL in the original paper and was obtained from a different site, requiring us to restructure it to match the study's format. Hyperparameters were consistent with the original study and the experiments were conducted on the on-site GPU cluster we have access to. The reproducibile codes are available at our GitHub repository \textit{\url{https://github.com/lamps-lab/rep-network-deconvolution}}.
+
+\subsubsection*{Results}
+
+% {\color{red} Start with your overall conclusion --- where did your results reproduce the original paper, and where did your results differ? Be specific and use precise language, e.g. "we reproduced the accuracy to within 1\% of reported value, which supports the paper's conclusion that it outperforms the baselines". Getting exactly the same number is in most cases infeasible, so you'll need to use your judgement to decide if your results support the original claim of the paper.}
+
+Our reproduced results confirm that network deconvolution improves model performance compared with batch normalization. Consistent higher accuracy was observed with network deconvolution for CIFAR-10 and CIFAR-100 datasets, particularly with 20 and 100 epochs. Single-epoch discrepancies were minimal. Results for VGG-11, ResNet-18, and DenseNet-121 on the ImageNet dataset also support the original claim, with improved top-1 and top-5 accuracy values. However, PNASNet-18 showed weaker performance overall.
+
+\subsubsection*{What was easy}
+
+The use of benchmark datasets, e.g., CIFAR-10 and CIFAR-100 with PyTorch, simplified reproducing the experimental setup and comparing our results with the original study.
+
+\subsubsection*{What was difficult}
+
+% {\color{red} Describe which parts of your reproduction study were difficult or took much more time than you expected. Perhaps the data was not available and you couldn't verify some experiments, or the author's code was broken and had to be debugged first. Or, perhaps some experiments just take too much time/resources to run and you couldn't verify them. The purpose of this section is to indicate to the reader which parts of the original paper are either difficult to re-use, or require a significant amount of work and resources to verify.}
+
+We faced PyTorch compatibility issues, module import errors, and significant computational demands. Handling the large ImageNet dataset required extensive computational resources. We needed to adopt a GPU with 80GB memory to use the data.
+
+\subsubsection*{Communication with original authors}
+
+%Briefly describe how much contact you had with the original authors (if any).
+
+Although we did not receive a response from the original authors, their well-documented code-base and clear methodology description provided sufficient information to reproduce the results.

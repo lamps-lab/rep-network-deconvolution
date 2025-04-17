@@ -1,0 +1,51 @@
+% DO NOT EDIT - automatically generated from metadata.yaml
+
+\def \codeURL{https://github.com/lamps-lab/rep-network-deconvolution}
+\def \codeDOI{}
+\def \dataURL{}
+\def \dataDOI{}
+\def \editorNAME{}
+\def \editorORCID{}
+\def \reviewerINAME{}
+\def \reviewerIORCID{}
+\def \reviewerIINAME{}
+\def \reviewerIIORCID{}
+\def \dateRECEIVED{}
+\def \dateACCEPTED{}
+\def \datePUBLISHED{}
+\def \articleTITLE{[Re] Network Deconvolution}
+\def \articleTYPE{Reproduction}
+\def \articleDOMAIN{Computer Science}
+\def \articleBIBLIOGRAPHY{bibliography.bib}
+\def \articleYEAR{2024}
+\def \reviewURL{}
+\def \articleABSTRACT{Reproducibility Summary
+Scope of Reproducibility — Our work evaluates the claim that network deconvolution [1] improves deep learning model performance compared with batch normalization. We re-ran the paper’s original experiments using the same software, datasets, and evaluation metrics to determine whether the reported results could be reproduced. We examine the consistency of reported values, document discrepancies, and discuss reasons that some results were not able to be consistently reproduced.
+Methodology — We used the original study’s GitHub codebase [2] with thorough documentation to repeat experiments to generate results in Tables 1 and 2. For each CNN architecture, we conducted three attempts per reported value, resulting in 360 reproduced values as compared with 120 results reported in the original paper. The ImageNet dataset was not available from the URL in the original paper and was obtained from a different site, requiring us to restructure it to match the study’s format. Hyperparameters were consistent with the original study and the experiments were conducted on the on-site GPU cluster we have access to. The reproducibile codes are available at our GitHub repository https://github.com/lamps-lab/rep-network-deconvolution.
+Results — Our reproduced results confirm that network deconvolution improves model performance compared with batch normalization. Consistent higher accuracy was observed with network deconvolution for CIFAR-10 and CIFAR-100 datasets, particularly with 20 and 100 epochs. Single epoch discrepancies were minimal. Results for VGG-11, ResNet-18, and DenseNet-121 on the ImageNet dataset also support the original claim, with improved top-1 and top-5 accuracy values. However, PNASNet-18 showed weaker performance overall.
+What was easy — The use of benchmark datasets, e.g., CIFAR-10 and CIFAR-100 with PyTorch, simplified reproducing the experimental setup and comparing our results with the original study.
+What was difficult — We faced PyTorch compatibility issues, module import errors, and significant computational demands. Handling the large ImageNet dataset required extensive computational resources. We needed to adopt a GPU with 80GB memory to use the data.
+Communication with original authors — Although we did not receive a response from the original authors, their well-documented code-base and clear methodology description provided sufficient information to reproduce the results.}
+\def \replicationCITE{}
+\def \replicationBIB{}
+\def \replicationURL{}
+\def \replicationDOI{}
+\def \contactNAME{Rochana R. Obadage}
+\def \contactEMAIL{rochana@cs.odu.edu}
+\def \articleKEYWORDS{rescience c, python}
+\def \journalNAME{ReScience C}
+\def \journalVOLUME{}
+\def \journalISSUE{}
+\def \articleNUMBER{}
+\def \articleDOI{}
+\def \authorsFULL{Rochana R. Obadage et al.}
+\def \authorsABBRV{R.R. Obadage et al.}
+\def \authorsSHORT{Obadage et al.}
+\title{\articleTITLE}
+\date{}
+\author[1,\orcid{0000-0003-1593-4052}]{Rochana R. Obadage}
+\author[1,\orcid{0009-0009-1697-1614}]{Kumushini Thennakoon}
+\author[2,\orcid{0000-0002-1464-0848}]{Sarah M. Rajtmajer}
+\author[1,\orcid{0000-0003-0173-4463}]{Jian Wu}
+\affil[1]{Old Dominion University, Norfolk, VA, USA}
+\affil[2]{IST, Pennsylvania State University, University Park, PA, USA}

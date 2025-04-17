@@ -1,0 +1,136 @@
+# To be filled by the author(s) at the time of submission
+# -------------------------------------------------------
+
+# Title of the article:
+#  - For a successful replication, it shoudl be prefixed with "[Re]"
+#  - For a failed replication, it should be prefixed with "[¬Re]"
+#  - For other article types, no instruction (but please, not too long)
+title: "[Re] Network Deconvolution"
+
+# List of authors with name, orcid number, email and affiliation
+# Affiliation "*" means contact author
+authors:    
+  - name: Rochana R. Obadage
+    orcid: 0000-0003-1593-4052
+    email: rochana@cs.odu.edu
+    affiliations: 1,*      # * is for contact authorws
+    
+  - name: Kumushini Thennakoon
+    orcid: 0009-0009-1697-1614
+    email: kumushini@cs.odu.edu
+    affiliations: 1
+
+  - name: Sarah M. Rajtmajer
+    orcid: 0000-0002-1464-0848
+    email: smr48@psu.edu
+    affiliations: 2
+    
+  - name: Jian Wu
+    orcid: 0000-0003-0173-4463
+    email: j1wu@odu.edu
+    affiliations: 1
+
+# List of affiliations with code (corresponding to author affiliations), name
+# and address. You can also use these affiliations to add text such as "Equal
+# contributions" as name (with no address).
+affiliations:
+  - code:    1
+    name:    Old Dominion University
+    address: Norfolk, VA, USA
+    
+  - code:    2
+    name:    IST, Pennsylvania State University
+    address: University Park, PA, USA
+
+
+# List of keywords (adding the programming language might be a good idea)
+keywords: rescience c, python
+
+# Code URL and DOI (url is mandatory for replication, doi after acceptance)
+# You can get a DOI for your code from Zenodo,
+#   see https://guides.github.com/activities/citable-code/
+code:
+  - url: https://github.com/lamps-lab/rep-network-deconvolution
+  - doi: 
+
+# Date URL and DOI (optional if no data)
+data:
+  - url:
+  - doi:
+
+# Information about the original article that has been replicated
+replication:
+ - cite: # Full textual citation
+ - bib:  # Bibtex key (if any) in your bibliography file
+ - url:  # URL to the PDF, try to link to a non-paywall version
+ - doi:  # Regular digital object identifier
+
+# Don't forget to surround abstract with double quotes
+abstract: "Reproducibility Summary
+
+Scope of Reproducibility — Our work evaluates the claim that network deconvolution [1] improves deep learning model performance compared with batch normalization. We re-ran the paper’s original experiments using the same software, datasets, and evaluation metrics to determine whether the reported results could be reproduced. We examine the consistency of reported values, document discrepancies, and discuss reasons that some results were not able to be consistently reproduced.
+
+Methodology — We used the original study’s GitHub codebase [2] with thorough documentation to repeat experiments to generate results in Tables 1 and 2. For each CNN architecture, we conducted three attempts per reported value, resulting in 360 reproduced values as compared with 120 results reported in the original paper. The ImageNet dataset was not available from the URL in the original paper and was obtained from a different site, requiring us to restructure it to match the study’s format. Hyperparameters were consistent with the original study and the experiments were conducted on the on-site GPU cluster we have access to. The reproducibile codes are available at our GitHub repository https://github.com/lamps-lab/rep-network-deconvolution.
+
+Results — Our reproduced results confirm that network deconvolution improves model performance compared with batch normalization. Consistent higher accuracy was observed with network deconvolution for CIFAR-10 and CIFAR-100 datasets, particularly with 20 and 100 epochs. Single epoch discrepancies were minimal. Results for VGG-11, ResNet-18, and DenseNet-121 on the ImageNet dataset also support the original claim, with improved top-1 and top-5 accuracy values. However, PNASNet-18 showed weaker performance overall.
+
+What was easy — The use of benchmark datasets, e.g., CIFAR-10 and CIFAR-100 with PyTorch, simplified reproducing the experimental setup and comparing our results with the original study.
+
+What was difficult — We faced PyTorch compatibility issues, module import errors, and significant computational demands. Handling the large ImageNet dataset required extensive computational resources. We needed to adopt a GPU with 80GB memory to use the data.
+
+Communication with original authors — Although we did not receive a response from the original authors, their well-documented code-base and clear methodology description provided sufficient information to reproduce the results."
+
+# Bibliography file (yours)
+bibliography: bibliography.bib
+  
+# Type of the article
+# Type can be:
+#  * Editorial
+#  * Letter
+#  * Replication
+type: Reproduction
+
+# Scientific domain of the article (e.g. Computational Neuroscience)
+#  (one domain only & try to be not overly specific)
+domain: Computer Science
+
+# Coding language (main one only if several)
+language:
+
+  
+# To be filled by the author(s) after acceptance
+# -----------------------------------------------------------------------------
+
+# For example, the URL of the GitHub issue where review actually occured
+review: 
+  - url: 
+
+contributors:
+  - name:
+    orcid: 
+    role: editor
+  - name:
+    orcid:
+    role: reviewer
+  - name:
+    orcid:
+    role: reviewer
+
+# This information will be provided by the editor
+dates:
+  - received:  #September 19, 2024
+  - accepted:
+  - published: 
+
+# This information will be provided by the editor
+article:
+  - number: # Article number will be automatically assigned during publication
+  - doi:    # DOI from Zenodo
+  - url:    # Final PDF URL (Zenodo or rescience website?)
+
+# This information will be provided by the editor
+journal:
+  - name:   "ReScience C"
+  - issn:   #2430-3658
+  - volume: #4
+  - issue:  #1
