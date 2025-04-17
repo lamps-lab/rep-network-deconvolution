@@ -1,4 +1,4 @@
-# Rep. Network Deconvolution [![DOI](https://img.shields.io/badge/Reproducibility_Study-Network_Deconvolution-blue)](https://github.com/yechengxi/deconvolution)
+# Rep. Network Deconvolution [![DOI](https://img.shields.io/badge/Reproducibility_Study-Network_Deconvolution-blue)](https://github.com/yechengxi/deconvolution) [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/lamps-lab/rep-network-deconvolution/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/lamps-lab/rep-network-deconvolution)
 This repository is a reproducibility study of [Network Deconvolution](https://github.com/yechengxi/deconvolution); the original work proposed by Ye et al. (2020). This reproducibility study is conducted
 to evaluate the ability to reproduce the results with current library dependencies, given that five years have passed since the original publication. The project requires Python GPU-based processing capabilities, TensorFlow and PyTorch frameworks." 
 
@@ -281,5 +281,5 @@ There were a few minor module import issues and some Python library version conf
 
 ```
 Rochana R. Obadage | Kumushini Thennakoon 
-Updated on: 04/01/2025
+Updated on: 04/17/2025
 ```
