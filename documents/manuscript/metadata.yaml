@@ -46,24 +46,26 @@ affiliations:
 # List of keywords (adding the programming language might be a good idea)
 keywords: rescience c, python
 
-# Code URL and DOI (url is mandatory for replication, doi after acceptance)
-# You can get a DOI for your code from Zenodo,
+# Code URL and DOI/SWH (url is mandatory for replication, doi after acceptance)
+# You can get a DOI for your code from Zenodo, or an SWH identifier from
+# Software Heritage.
 #   see https://guides.github.com/activities/citable-code/
 code:
   - url: https://github.com/lamps-lab/rep-network-deconvolution
   - doi: 
+  - swh: swh:1:dir:680efae9c7c628f93ee03731e73c34cf00b0e245
 
 # Date URL and DOI (optional if no data)
 data:
-  - url:
-  - doi:
+  - url: https://www.kaggle.com/c/imagenet-object-localization-challenge/data
+  - doi: 
 
 # Information about the original article that has been replicated
 replication:
  - cite: # Full textual citation
- - bib:  # Bibtex key (if any) in your bibliography file
- - url:  # URL to the PDF, try to link to a non-paywall version
- - doi:  # Regular digital object identifier
+ - bib: ye2020network  # Bibtex key (if any) in your bibliography file
+ - url: https://arxiv.org/pdf/1905.11926 # URL to the PDF, try to link to a non-paywall version
+ - doi: arXiv:1905.11926 # Regular digital object identifier
 
 # Don't forget to surround abstract with double quotes
 abstract: "Reproducibility Summary
@@ -95,7 +97,7 @@ type: Reproduction
 domain: Computer Science
 
 # Coding language (main one only if several)
-language:
+language: Python
 
   
 # To be filled by the author(s) after acceptance
@@ -103,23 +105,23 @@ language:
 
 # For example, the URL of the GitHub issue where review actually occured
 review: 
-  - url: 
+  - url: https://github.com/ReScience/submissions/issues/89
 
 contributors:
-  - name:
-    orcid: 
+  - name: Nicolas P. Rougier
+    orcid: 0000-0002-6972-589X
     role: editor
-  - name:
-    orcid:
+  - name: Varun Menon 
+    orcid: 0000-0002-4580-9183
     role: reviewer
-  - name:
-    orcid:
+  - name: Jemma Stachelek
+    orcid: 0000-0002-5924-2464
     role: reviewer
 
 # This information will be provided by the editor
 dates:
-  - received:  #September 19, 2024
-  - accepted:
+  - received: September 19, 2024
+  - accepted: April 17, 2025
   - published: 
 
 # This information will be provided by the editor

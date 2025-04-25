@@ -1,9 +1,7 @@
+\vspace{20pt}
 \section*{\centering Reproducibility Summary}
 
-%\textit{Template and style guide to \href{https://paperswithcode.com/rc2022}{ML Reproducibility Challenge 2022}. The following section of Reproducibility Summary is \textbf{mandatory}. This summary \textbf{must fit} in the first page, no exception will be allowed. When submitting your report in OpenReview, copy the entire summary and paste it in the abstract input field, where the sections must be separated with a blank line.}
-
 \subsubsection*{Scope of Reproducibility}
-% {\color{red} State the main claim(s) of the original paper you are trying to reproduce (typically the main claim(s) of the paper). This is meant to place the work in context, and to tell a reader the objective of the reproduction.}
 Our work evaluates the claim that network deconvolution \cite{ye2020network} improves deep learning model performance compared with batch normalization. We re-ran the paper's original experiments using the same software, datasets, and evaluation metrics to determine whether the reported results could be reproduced. We examine the consistency of reported values, document discrepancies, and discuss reasons that some results were not able to be consistently reproduced. % to contribute to the discussion on the reasons that caused some reproduced results not 100\% consistent with the reported ones.
 
 % On a theoretical note, we address shortcomings of the algorithm and propose an extension to alleviate them. We also prove a desirable theoretical property of the extended algorithm.
@@ -13,7 +11,7 @@ Our work evaluates the claim that network deconvolution \cite{ye2020network} imp
 
 % {\color{red} Briefly describe what you did and which resources you used. For example, did you use author's code? Did you re-implement parts of the pipeline? You can use this space to list the hardware and total budget (e.g. GPU hours) for the experiments.}
 %The authors published a repository with their experiments including most of the datasets used. 
-We used the original study's GitHub codebase \cite{githubGitHubYechengxideconvolution} with thorough documentation to repeat experiments to generate results in Tables 1 and 2. For each CNN architecture, we conducted three attempts per reported value, resulting in 360 reproduced values as compared with 120 results reported in the original paper. The ImageNet dataset was not available from the URL in the original paper and was obtained from a different site, requiring us to restructure it to match the study's format. Hyperparameters were consistent with the original study and the experiments were conducted on the on-site GPU cluster we have access to. The reproducibile codes are available at our GitHub repository \textit{\url{https://github.com/lamps-lab/rep-network-deconvolution}}.
+We used the original study's GitHub codebase \cite{githubGitHubYechengxideconvolution} with thorough documentation to repeat experiments to generate results in Tables 1 and 2. For each CNN architecture, we conducted three attempts per reported value, resulting in 360 reproduced values as compared with 120 results reported in the original paper. The ImageNet dataset was not available from the URL in the original paper and was obtained from a different site, requiring us to restructure it to match the study's format. Hyperparameters were consistent with the original study and the experiments were conducted on the on-site GPU cluster we have access to. %The reproducibile codes are available at our GitHub repository \textit{\url{https://github.com/lamps-lab/rep-network-deconvolution}}.
 
 \subsubsection*{Results}
 

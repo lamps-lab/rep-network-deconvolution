@@ -16,7 +16,7 @@
 
 %% --- Title -------------------------------------------------------------------
 {\let\newpage\relax\maketitle} \maketitle
-
+\vspace{-0.75cm}
 
 %% --- Margin information -----------------------------------------------------
 \marginnote{
@@ -28,9 +28,9 @@
   %%
   \textbf{Reviewed by}\\
   \ifdefempty{\reviewerINAME}{\textcolor{darkgray}{(Reviewer 1)}}
-             {\reviewerINAME\ifdefempty{\reviewerIORCID}{}{$^{\orcid{\editorORCID}}$}}\\
+             {\reviewerINAME\ifdefempty{\reviewerIORCID}{}{$^{\orcid{\reviewerIORCID}}$}}\\
   \ifdefempty{\reviewerIINAME}{\textcolor{darkgray}{(Reviewer 2)}}
-             {\reviewerIINAME\ifdefempty{\reviewerIIORCID}{}{$^{\orcid{\editorORCID}}$}}\\
+             {\reviewerIINAME\ifdefempty{\reviewerIIORCID}{}{$^{\orcid{\reviewerIIORCID}}$}}\\
   ~\\
   %%           
   \textbf{Received}\\
@@ -61,9 +61,13 @@
   
       The authors have declared that no competing interests exists.
 
+      % \ifdefempty{\codeURL}{}
+      % {Code is available at
+      % \href{\codeURL}{\codeURL}\ifdefempty{\codeDOI}{.}{ -- DOI \doi{\codeDOI}.}}
+
       \ifdefempty{\codeURL}{}
       {Code is available at
-      \href{\codeURL}{\codeURL}\ifdefempty{\codeDOI}{.}{ -- DOI \doi{\codeDOI}.}}
+      \href{\codeURL}{\detokenize\expandafter{\codeURL}}\ifdefempty{\codeDOI}{.}{ -- DOI \doi{\codeDOI}.}\ifdefempty{\codeSWH}{.}{ -- SWH  \href{https://archive.softwareheritage.org/\codeSWH/}{\detokenize\expandafter{\codeSWH}}.}}      
 
       \ifdefempty{\dataURL}{}
       {Data is available at
@@ -84,7 +88,7 @@
 
 %% --- Replication ------------------------------------------------------------
 \ifdefempty{\replicationBIB}{}{
-  {\small \sffamily \bfseries A replication of}
+  {\small \sffamily \bfseries A reproduction of}
   \ifdefempty{\replicationURL}
        {\href{http://doi.org/\replicationDOI}{\small \sffamily \replicationBIB}}
        {\href{\replicationURL}{\small \sffamily \replicationBIB}}.

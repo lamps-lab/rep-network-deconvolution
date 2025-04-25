@@ -2,23 +2,24 @@
 
 \def \codeURL{https://github.com/lamps-lab/rep-network-deconvolution}
 \def \codeDOI{}
-\def \dataURL{}
+\def \codeSWH{swh:1:dir:680efae9c7c628f93ee03731e73c34cf00b0e245}
+\def \dataURL{https://www.kaggle.com/c/imagenet-object-localization-challenge/data}
 \def \dataDOI{}
-\def \editorNAME{}
-\def \editorORCID{}
-\def \reviewerINAME{}
-\def \reviewerIORCID{}
-\def \reviewerIINAME{}
-\def \reviewerIIORCID{}
-\def \dateRECEIVED{}
-\def \dateACCEPTED{}
+\def \editorNAME{Nicolas P. Rougier}
+\def \editorORCID{0000-0002-6972-589X}
+\def \reviewerINAME{Varun Menon}
+\def \reviewerIORCID{0000-0002-4580-9183}
+\def \reviewerIINAME{Jemma Stachelek}
+\def \reviewerIIORCID{0000-0002-5924-2464}
+\def \dateRECEIVED{19 September 2024}
+\def \dateACCEPTED{17 April 2025}
 \def \datePUBLISHED{}
 \def \articleTITLE{[Re] Network Deconvolution}
 \def \articleTYPE{Reproduction}
 \def \articleDOMAIN{Computer Science}
 \def \articleBIBLIOGRAPHY{bibliography.bib}
-\def \articleYEAR{2024}
-\def \reviewURL{}
+\def \articleYEAR{2025}
+\def \reviewURL{https://github.com/ReScience/submissions/issues/89}
 \def \articleABSTRACT{Reproducibility Summary
 Scope of Reproducibility — Our work evaluates the claim that network deconvolution [1] improves deep learning model performance compared with batch normalization. We re-ran the paper’s original experiments using the same software, datasets, and evaluation metrics to determine whether the reported results could be reproduced. We examine the consistency of reported values, document discrepancies, and discuss reasons that some results were not able to be consistently reproduced.
 Methodology — We used the original study’s GitHub codebase [2] with thorough documentation to repeat experiments to generate results in Tables 1 and 2. For each CNN architecture, we conducted three attempts per reported value, resulting in 360 reproduced values as compared with 120 results reported in the original paper. The ImageNet dataset was not available from the URL in the original paper and was obtained from a different site, requiring us to restructure it to match the study’s format. Hyperparameters were consistent with the original study and the experiments were conducted on the on-site GPU cluster we have access to. The reproducibile codes are available at our GitHub repository https://github.com/lamps-lab/rep-network-deconvolution.
@@ -27,9 +28,9 @@ What was easy — The use of benchmark datasets, e.g., CIFAR-10 and CIFAR-100 wi
 What was difficult — We faced PyTorch compatibility issues, module import errors, and significant computational demands. Handling the large ImageNet dataset required extensive computational resources. We needed to adopt a GPU with 80GB memory to use the data.
 Communication with original authors — Although we did not receive a response from the original authors, their well-documented code-base and clear methodology description provided sufficient information to reproduce the results.}
 \def \replicationCITE{}
-\def \replicationBIB{}
-\def \replicationURL{}
-\def \replicationDOI{}
+\def \replicationBIB{ye2020network}
+\def \replicationURL{https://arxiv.org/pdf/1905.11926}
+\def \replicationDOI{arXiv:1905.11926}
 \def \contactNAME{Rochana R. Obadage}
 \def \contactEMAIL{rochana@cs.odu.edu}
 \def \articleKEYWORDS{rescience c, python}
