@@ -16,6 +16,24 @@ README file of the original study is available at `original_paper/README.md`.
 }
 ```
 
+## Reproducibility Study
+```BibTeX
+@article{rochana_r_obadage_2025_15321683,
+    author       = {Rochana R. Obadage and
+                    Kumushini Thennakoon and
+                    Sarah M. Rajtmajer and
+                    Jian Wu},
+    title        = {[Re] Network Deconvolution},
+    journal      = {ReScience C},
+    year         = 2025,
+    volume       = 10,
+    number       = 1,
+    month        = may,
+    doi          = {10.5281/zenodo.15321683},
+    url          = {https://doi.org/10.5281/zenodo.15321683},
+}
+```
+
 ## Folder structure 
 ```
     .
@@ -275,11 +293,25 @@ There were a few minor module import issues and some Python library version conf
             ```
 
 
+## Citation
 ```BibTeX
-
+@article{rochana_r_obadage_2025_15321683,
+    author       = {Rochana R. Obadage and
+                    Kumushini Thennakoon and
+                    Sarah M. Rajtmajer and
+                    Jian Wu},
+    title        = {[Re] Network Deconvolution},
+    journal      = {ReScience C},
+    year         = 2025,
+    volume       = 10,
+    number       = 1,
+    month        = may,
+    doi          = {10.5281/zenodo.15321683},
+    url          = {https://doi.org/10.5281/zenodo.15321683},
+}
 ```
 
 ```
 Rochana R. Obadage | Kumushini Thennakoon 
-Updated on: 04/17/2025
+Updated on: 05/02/2025
 ```
