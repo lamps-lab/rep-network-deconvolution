@@ -2,13 +2,13 @@
 
 <p align="left">
   <a href="https://archive.softwareheritage.org/badge/origin/https://github.com/lamps-lab/rep-network-deconvolution/">
-    <img src="https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/lamps-lab/rep-network-deconvolution" alt="Software Heritage">
-  </a> 
+    <img src="https://archive.softwareheritage.org/badge/origin/https://github.com/lamps-lab/rep-network-deconvolution/" alt="Software Heritage">
+  </a>
 
   <a href="https://rescience.github.io/bibliography/Obadage_2025.html">
     <img src="https://img.shields.io/badge/Published_Paper-Read_Now-2ea44f?style=flat-square&logo=readthedocs&logoColor=white" alt="Published Paper">
-  </a> 
-    
+  </a>
+
   <a href="https://arxiv.org/pdf/2410.01189">
     <img src="https://img.shields.io/badge/Preprint-arXiv-B31B1B?style=flat-square&logo=arxiv&logoColor=white" alt="Preprint">
   </a>
