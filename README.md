@@ -1,7 +1,7 @@
 # Rep. Network Deconvolution [![DOI](https://img.shields.io/badge/Reproducibility_Study-Network_Deconvolution-blue)](https://github.com/yechengxi/deconvolution) 
 
 <p align="left">
-  <a href="https://archive.softwareheritage.org/badge/origin/https://github.com/lamps-lab/rep-network-deconvolution/">
+  <a href="https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/lamps-lab/rep-network-deconvolution">
     <img src="https://archive.softwareheritage.org/badge/origin/https://github.com/lamps-lab/rep-network-deconvolution/" alt="Software Heritage">
   </a>
 
