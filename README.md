@@ -1,4 +1,4 @@
-# Rep. Network Deconvolution [![DOI](https://img.shields.io/badge/Reproducibility_Study-Network_Deconvolution-blue)](https://github.com/yechengxi/deconvolution) 
+# Rep. Network Deconvolution 
 
 <p align="left">
   <a href="https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/lamps-lab/rep-network-deconvolution">
@@ -12,6 +12,11 @@
   <a href="https://arxiv.org/pdf/2410.01189">
     <img src="https://img.shields.io/badge/Preprint-arXiv-B31B1B?style=flat-square&logo=arxiv&logoColor=white" alt="Preprint">
   </a>
+  
+  <a href="https://doi.org/10.5281/zenodo.15321683">
+    <img src="https://img.shields.io/badge/DOI-10.5281/zenodo.15321683-blue?style=flat-square" alt="DOI">
+  </a>  
+  
 </p>
 
 This repository is a reproducibility study of [Network Deconvolution](https://github.com/yechengxi/deconvolution); the original work proposed by Ye et al. (2020). This reproducibility study is conducted
